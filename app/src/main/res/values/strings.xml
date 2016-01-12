@@ -1,0 +1,56 @@
+<resources>
+    <!-- VIEWER NOTE - PASE API KEY BELOW-->
+    <string name="url_APIKEY" translatable="false"></string>
+
+
+    <string name="app_name">Wonderbeef Movies</string>
+    <string name="action_settings">Settings</string>
+    <string name="addfavorite">Favorite</string>
+    <string name="shareTitle">Check out this video</string>
+
+
+<!-- MovieDetailFragment -->
+    <string name="label_ReleaseDate">Release Date</string>
+    <string name="label_AverageRating">Average Rating</string>
+    <string name="label_switch">See Reviews</string>
+
+
+
+<!-- Keys and nontranslatables-->
+
+    <string name="key_prefs_sortby" translatable="false">MDB_SORTBY</string>
+    <string name="key_args_sortBy" translatable="false">SORTBY</string>
+    <string name="default_prefs_sortby" translatable="false">popularity.desc</string>
+
+    <string name="key_args_movieItem" translatable="false">MOVIE_ITEM</string>
+    <string name="key_args_movieID" translatable="false">MOVIE_ID</string>
+    <string name ="key_args_favoriteMode" translatable="false">FAVMODE</string>
+    <string name ="key_path_posters" translatable="false">movieposters</string>
+
+    <!-- Tags for RecyclerViews-->
+    <string name="tag_movieID" translatable="false">TAG_MOVIEID</string>
+    <string name="tag_movieObject" translatable="false">TAG_MOVIEOBJECT</string>
+    <string name="tag_youtubeID" translatable="false">TAG_YOUTUBEKEY</string>
+
+    <string name="api_posterPath" translatable="false">poster_path</string>
+    <string name="api_movieID" translatable="false">id</string>
+    <string name="url_posterpath" translatable="false">http://image.tmdb.org/t/p/</string>
+    <string name="url_poster_size_185" translatable="false">w185/</string>
+    <string name="tag_MovieID" translatable="false">FAV_ID</string>
+
+    <!-- Project only asks for most popular and highest rated,
+    so leave out the other 3 million options-->
+    <string-array name="values_sortby" translatable="false">
+        <item>popularity.desc</item>
+        <item>vote_average.desc</item>
+        <item>favorited</item>
+    </string-array>
+
+    <string-array name="labels_sortby">
+        <item>Most Popular</item>
+        <item>Highest Rated</item>
+        <item>Favorited</item>
+    </string-array>
+    <string name="title_activity_movie_detail">Details</string>
+
+</resources>

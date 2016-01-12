@@ -1,0 +1,140 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:scrollbars="vertical">
+    <!-- This layout kind of stank with 2 recyclerviews. I was unable to wrap these views with
+    a scrollview, making tablet mode fairly un user friendly-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:textColor="@color/colorAccent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/detail_Title"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+<LinearLayout
+    android:layout_below="@+id/detail_Title"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:id="@+id/detail_container_tophalf"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="30dp"
+
+    >
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/detail_poster"
+        android:layout_weight="50"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        />
+
+    <!-- One linear layout to position beats 4 views. This isn't 2007, most phones can handle it-->
+    <LinearLayout
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/detail_image"
+        android:layout_alignTop="@+id/detail_image"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="left|top"
+        android:layout_weight="50"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        >
+
+
+        <TextView
+            android:text="@string/label_ReleaseDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/detail_releaseDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/text_subtitle"
+            android:textColor="@color/textColorPrimary"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_AverageRating"
+            />
+
+        <TextView
+            android:id="@+id/detail_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/text_subtitle"
+            android:textColor="@color/textColorPrimary"
+            />
+
+        <CheckBox
+            android:id="@+id/detail_Favorite"
+            style="?android:attr/starStyle"
+            android:text="@string/addfavorite"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/colorAccent"
+            />
+
+        <android.support.v7.widget.SwitchCompat
+
+            android:gravity="right"
+            android:id="@+id/detail_switch"
+            android:text="@string/label_switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+
+            />
+
+
+    </LinearLayout>
+</LinearLayout>
+
+
+        <LinearLayout
+            android:layout_below="@+id/detail_container_tophalf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/detail_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/detail_list_trailers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/detail_list_reviews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                />
+
+        </LinearLayout>
+
+
+
+
+</RelativeLayout>
